@@ -3,33 +3,16 @@
 #include <string.h>
 #include <stdbool.h>
 
-
+#define ROW_LENGHT 101
 
 int main() {
-  // file pointer
-  FILE* fptr = stdin;
-
-  // buffer to hold each line of input
-  char data[101];
-
-  while(fgets(data, 101, fptr) != NULL ){
     
-    
-    // finding \n in buffer data[];
-    // returns pointer (address) to first occurrence of \n
-    char* newline = strchr(data, '\n');
-    
-    // if \n found, replace it with \0 
-    if(newline != NULL){  
-      *newline = '\0';
-    }
+  FILE* pFile = stdin;
+  char buffAddresses[ROW_LENGHT];
 
-    printf("%s", data);
+  while(fgets(buffAddresses, ROW_LENGHT, pFile) != NULL){
+    printf("%s", buffAddresses);
   }
 
-  
-  fclose(fptr);
-
-  
   return 0;
 }
