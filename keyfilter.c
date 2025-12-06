@@ -76,7 +76,7 @@ void collect_next_chars(char* next_chars, int* char_count, struct Address* addre
 }
 
 /**
- * Sorts chars in ascending order (ASCII).
+ * Sorts chars in ascending orderq.
  * @param chars Array of characters to sort.
  * @param count Number of characters to sort.
  */
